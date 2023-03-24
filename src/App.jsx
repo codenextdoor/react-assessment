@@ -79,7 +79,7 @@ function App() {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              <React.Fragment>
+              <>
                 {albums.map((album) => (
                   <Album
                     key={album.id}
@@ -87,19 +87,7 @@ function App() {
                     title={album.title}
                   />
                 ))}
-                {isLoading && (
-                  <ThreeDots
-                    height="80"
-                    width="80"
-                    radius="9"
-                    color="#4fa94d"
-                    ariaLabel="three-dots-loading"
-                    wrapperStyle={{}}
-                    wrapperClassName=""
-                    visible={true}
-                  />
-                )}
-              </React.Fragment>
+              </>
             )}
           </div>
         </div>
